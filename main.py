@@ -21,6 +21,7 @@ def main():
 
         # limit the framerate to 60 FPS
         dt = clock.tick(FRAMERATE) / 1000
+        player.update(dt)
 
 
 if __name__ == "__main__":
