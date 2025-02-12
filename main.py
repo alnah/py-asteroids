@@ -1,9 +1,10 @@
 import pygame
-from player import Player
+
 from asteroid import Asteroid
 from asteroid_field import AsteroidField
+from constants import BLACK, FRAMERATE, SCREEN_HEIGHT, SCREEN_WIDTH
+from player import Player
 from shot import Shot
-from constants import BLACK, FRAMERATE, SCREEN_WIDTH, SCREEN_HEIGHT
 
 
 def main():
@@ -47,7 +48,7 @@ def main():
                 if a.collision(s):
                     a.split()
                     s.kill()
-                
+
         pygame.display.flip()
         # handle framerate
         dt = clock.tick(FRAMERATE) / 1000  # limit the framerate to 60 FPS

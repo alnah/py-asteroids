@@ -1,7 +1,9 @@
 import random
+
 import pygame
+
 from circleshape import CircleShape
-from constants import WHITE, THICKNESS, ASTEROID_MIN_RADIUS, ASTEROID_SPEED_UP
+from constants import ASTEROID_MIN_RADIUS, ASTEROID_SPEED_UP, THICKNESS, WHITE
 
 
 class Asteroid(CircleShape):
@@ -13,7 +15,7 @@ class Asteroid(CircleShape):
 
     def update(self, dt: int) -> None:
         self.position += self.velocity * dt
-    
+
     def split(self) -> None:
         # destroy asteroid
         self.kill()

@@ -1,13 +1,15 @@
-import pygame
 import random
+
+import pygame
+
 from asteroid import Asteroid
 from constants import (
-    SCREEN_WIDTH,
-    SCREEN_HEIGHT,
-    ASTEROID_MIN_RADIUS,
-    ASTEROID_MAX_RADIUS,
-    ASTEROID_SPAWN_RATE,
     ASTEROID_KINDS,
+    ASTEROID_MAX_RADIUS,
+    ASTEROID_MIN_RADIUS,
+    ASTEROID_SPAWN_RATE,
+    SCREEN_HEIGHT,
+    SCREEN_WIDTH,
 )
 
 
@@ -39,7 +41,9 @@ class AsteroidField(pygame.sprite.Sprite):
         pygame.sprite.Sprite.__init__(self, self.containers)
         self.spawn_timer: int = 0
 
-    def spawn(self, radius: int, position: pygame.Vector2, velocity: pygame.Vector2) -> None:
+    def spawn(
+        self, radius: int, position: pygame.Vector2, velocity: pygame.Vector2
+    ) -> None:
         asteroid = Asteroid(position.x, position.y, radius)
         asteroid.velocity = velocity
 
