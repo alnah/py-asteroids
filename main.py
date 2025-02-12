@@ -43,6 +43,11 @@ def main():
                 print("Game over !")
                 pygame.quit()
                 return
+            for s in shots:
+                if a.collision(s):
+                    a.split()
+                    s.kill()
+                
         pygame.display.flip()
         # handle framerate
         dt = clock.tick(FRAMERATE) / 1000  # limit the framerate to 60 FPS
