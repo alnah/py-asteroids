@@ -20,7 +20,7 @@ def main():
     Asteroid.containers = (asteroids, updatable, drawable)
     AsteroidField.containers = updatable
     # create a player
-    Player(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)
+    player = Player(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)
     AsteroidField()
     # create a delta
     dt = 0
@@ -35,6 +35,11 @@ def main():
         updatable.update(dt)
         for d in drawable:
             d.draw(screen)
+        for a in asteroids:
+            if a.collision(player):
+                print("Game over !")
+                pygame.quit()
+                return
         pygame.display.flip()
         # handle framerate
         dt = clock.tick(FRAMERATE) / 1000  # limit the framerate to 60 FPS
