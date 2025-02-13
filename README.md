@@ -1,6 +1,6 @@
 # py-asteroids
 
-`py-asteroids` is a Python version of the classic arcade game Asteroids, originally developed and published by Atari in 1979. The game was designed by Lyle Rains and Ed Logg.
+A Python version of the classic arcade game [Asteroids](https://www.youtube.com/watch?v=cZfsnA7dAHI), originally developed and published by Atari in 1979. The game was designed by Lyle Rains and Ed Logg.
 This Python implementation is inspired by [Boot.dev](https://github.com/bootdotdev).
 
 ## Requirements
@@ -11,9 +11,9 @@ Ensure that Python is installed on your system. You can check your installed ver
 python --version
 ```
 
-If you need to install Python, download the latest version from python.org.
+If you need to install Python, [download the latest version](https://www.python.org/downloads/).
 
-Additionally, make sure /usr/local/bin is included in your system’s $PATH. Check by running:
+Additionally, make sure `/usr/local/bin` is included in your system’s `$PATH`. Check by running:
 
 ```
 echo $PATH | grep /usr/local/bin
@@ -52,3 +52,13 @@ Run the game with:
 ```
 asteroids
 ```
+
+# Control
+
+Use the following controls to play the game:
+
+- Space: Shoot
+- Up: Move Up
+- Down: Move Down
+- Left: Rotate Left
+- Right: Rotate Right

@@ -7,7 +7,7 @@ TARGET=/usr/local/bin
 
 .PHONY: all env install lintfix fmt build clean
 
-default: all
+default: env install build clean
 
 all: env install lintfix fmt build clean
 
