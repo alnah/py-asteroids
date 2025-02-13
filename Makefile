@@ -30,7 +30,7 @@ lintfix:
 build: install
 	$(info 🏗️ BUILDING THE PROJECT...)
 	$(PYINSTALLER) --onefile --noconsole --name $(BUILD_NAME) main.py
-	sudo mv dist/$(BUILD_NAME) $(TARGET)
+	mv dist/$(BUILD_NAME) $(TARGET)
 
 clean:
 	$(info 🧹 CLEANING UP...)

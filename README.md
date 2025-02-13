@@ -42,7 +42,7 @@ Clone the repository and build the project using make:
 ```
 git clone https://github.com/alnah/py-asteroids.git
 cd py-asteroids
-make
+sudo make
 ```
 
 # Usage
