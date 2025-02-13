@@ -44,10 +44,12 @@ class AsteroidField(pygame.sprite.Sprite):
     def spawn(
         self, radius: int, position: pygame.Vector2, velocity: pygame.Vector2
     ) -> None:
+        """Create new asteroid entity with specified physical properties."""
         asteroid = Asteroid(position.x, position.y, radius)
         asteroid.velocity = velocity
 
     def update(self, dt: int) -> None:
+        """Manage asteroid spawn timing and edge selection logic."""
         self.spawn_timer += dt
         if self.spawn_timer > ASTEROID_SPAWN_RATE:
             self.spawn_timer = 0
