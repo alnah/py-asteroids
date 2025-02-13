@@ -35,7 +35,7 @@ echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.zshrc
 source ~/.zshrc
 ```
 
-# Installation
+## Installation
 
 Clone the repository and build the project using make:
 
@@ -45,7 +45,7 @@ cd py-asteroids
 sudo make
 ```
 
-# Usage
+## Usage
 
 Run the game with:
 
@@ -53,7 +53,7 @@ Run the game with:
 asteroids
 ```
 
-# Control
+## Control
 
 Use the following controls to play the game:
 
